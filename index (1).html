@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>📝 Minhas Tarefas</h1>
+      <p class="data" id="data"></p>
+    </header>
+
+    <form id="form" class="form" autocomplete="off">
+      <input id="entrada" type="text" placeholder="O que você precisa fazer?" maxlength="120" aria-label="Nova tarefa" required>
+      <button type="submit" aria-label="Adicionar tarefa">+</button>
+    </form>
+
+    <nav class="filtros" aria-label="Filtros">
+      <button class="filtro ativo" data-filtro="todas">Todas</button>
+      <button class="filtro" data-filtro="pendentes">Pendentes</button>
+      <button class="filtro" data-filtro="concluidas">Concluídas</button>
+    </nav>
+
+    <ul id="lista" class="lista"></ul>
+    <p id="vazio" class="vazio" hidden>Nenhuma tarefa por aqui 🎉</p>
+
+    <footer>
+      <span id="contador">0 tarefas</span>
+      <button id="limpar" class="limpar">Limpar concluídas</button>
+    </footer>
+
+    <p class="dica">Dica: clique duas vezes numa tarefa para editar.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
